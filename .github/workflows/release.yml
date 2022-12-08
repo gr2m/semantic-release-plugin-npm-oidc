@@ -9,13 +9,28 @@ name: Release
 jobs:
   release:
     name: release
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           cache: npm
           node-version: 16
+      - name: Clone npm
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3
+        with:
+          repository: npm/cli
+          ref: provenance
+          path: npm
+      - name: Build npm
+        run: |
+          cd npm
+          node . link
+          cd ..
+          npm version
       - run: npm ci
       - run: npx semantic-release
         env:
