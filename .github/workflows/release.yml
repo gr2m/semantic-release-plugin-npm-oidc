@@ -9,9 +9,11 @@ name: Release
 jobs:
   release:
     name: release
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
+      issues: write
+      pull-requests: write
       id-token: write
     steps:
       - uses: actions/checkout@v3
