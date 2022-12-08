@@ -39,7 +39,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_BOT_NPM_TOKEN }}
-      - run: which npm
-      - run: npm publish --provenance
+      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
         env:
           NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_BOT_NPM_TOKEN }}
+      - run: npm publish --provenance
