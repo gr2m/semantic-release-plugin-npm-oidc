@@ -116,8 +116,8 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      "@semantic-release/github",
-      "@gr2m/semantic-release-plugin-npm-oidc"
+      "@gr2m/semantic-release-plugin-npm-oidc",
+      "@semantic-release/github"
     ]
   }
 }

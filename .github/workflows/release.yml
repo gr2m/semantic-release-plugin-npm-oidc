@@ -33,6 +33,7 @@ jobs:
           node . link
           cd ..
           npm version
+      - run: which npm
       - run: npm ci
       - run: npx semantic-release
         env:
