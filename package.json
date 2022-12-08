@@ -30,7 +30,8 @@
     "read-pkg": "^5.0.0",
     "registry-auth-token": "^4.0.0",
     "semver": "^7.1.2",
-    "tempy": "^1.0.0"
+    "tempy": "^1.0.0",
+    "@gr2m/semantic-release-plugin-npm-oidc": "file:."
   },
   "devDependencies": {
     "ava": "4.2.0",
@@ -129,7 +130,7 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/github",
-      "."
+      "@gr2m/semantic-release-plugin-npm-oidc"
     ]
   }
 }
