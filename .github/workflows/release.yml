@@ -20,9 +20,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           cache: npm
-          node-version: 16
+          node-version: lts/*
       - name: Clone npm
-        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # v3
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
         with:
           repository: npm/cli
           ref: provenance
