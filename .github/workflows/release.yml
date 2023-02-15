@@ -21,18 +21,7 @@ jobs:
         with:
           cache: npm
           node-version: lts/*
-      - name: Clone npm
-        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
-        with:
-          repository: npm/cli
-          ref: provenance
-          path: npm
-      - name: Build npm
-        run: |
-          cd npm
-          node . link
-          cd ..
-          npm version
+      - run: npm install -g npm@latest
       - run: which npm
       - run: npm ci
       - run: npx semantic-release
