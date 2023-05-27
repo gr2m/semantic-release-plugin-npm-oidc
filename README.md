@@ -1,3 +1,10 @@
+# This repository is archived
+
+`@semantic-release/npm` has support for provenance now:
+https://github.com/semantic-release/npm#npm-provenance
+
+---
+
 # @semantic-release/npm
 
 [**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to publish a [npm](https://www.npmjs.com) package.
